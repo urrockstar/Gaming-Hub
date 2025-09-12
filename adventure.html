@@ -171,147 +171,23 @@ font-weight: bold;
     padding: 1rem;
     background: #222;
     color:white;
+    margin-top: 50%;
   }
   </style>
 </head>
 <body>
     <header class="main-header">
     <nav>
-      <ul>
+       <ul>
        <li><a href="C:\Users\prabhat\OneDrive\Documents\my website\index.html">Home</a></li>
         <li><a href="C:\Users\prabhat\OneDrive\Documents\my website\about.html">About</a></li>
         <li><a href="C:\Users\prabhat\OneDrive\Documents\my website\features.html">Features</a></li>
         <li><a href="game-types.html">Game Types</a></li>
         <li><a href="c:\Users\prabhat\OneDrive\Documents\my website\contact.html">contect</a></li>
-      </ul>
+      </ul>>
     </nav>
     <button class="toggle-btn" onclick="toggleMode()">Toggle Mode</button>
   </header>
-
-  <section class="hero-header">
-    <h1>All Types of Games</h1>
-    <p>Explore every genre and type of game across the world!</p>
-  </section>
-  <div class="search-container">
-    <input type="text" id="searchInput" placeholder="Search game types..." onkeyup="searchGames()">
-  </div>
-
-  <section class="game-section">
-    <a href="action.html" class="game-card">
-      <h3>Action Games</h3>
-      <p>Fast-paced, combat-heavy experiences. Click to explore!</p>
-    </a>
-
-    <a href="adventure.html" class="game-card">
-      <h3>Adventure Games</h3>
-      <p>Story-rich journeys filled with exploration and puzzle-solving.</p>
-    </a>
-
-    <a href="sports.html" class="game-card">
-      <h3>Sports Games</h3>
-      <p>All about competition—football, cricket, racing and more!</p>
-    </a>
-
-    <a href="rpg.html" class="game-card">
-      <h3>RPGs</h3>
-      <p>Level up, explore worlds, and immerse in character-driven stories.</p>
-    </a>
-
-    <a href="all games/simulation.html" class="game-card">
-      <h3>Simulation Games</h3>
-      <p>From flight simulators to farming—live your virtual dream life.</p>
-    </a>  
-        <a href="" class="game-card">
-          <h3>Strategy</h3>
-          <p>Planning, resource management, and tactics</p>
-            <p></p>
-        </a>
-    
-        <a href="" class="game-card">
-          <h3>Sports</h3>
-          <p>Based on real or fantasy sports competitions</p>
-            <p></p>
-        </a>
-    
-        <a href="" class="game-card">
-          <h3>Racing</h3>
-          <p>Speed-focused vehicle racing and competitions</p>
-            <p></p>
-        </a>
-    
-        <a href="" class="game-card">
-          <h3>Fighting</h3>
-          <p>1v1 or team combat-focused gameplay</p>
-            <p></p>
-        </a>
-    
-        <a href="" class="game-card">
-          <h3>Shooter</h3>
-          <p>First or third-person shooting action</p>
-            <p></p>
-        </a>
-    
-        <a href="" class="game-card">
-          <h3>Battle Royale</h3>
-          <p>Survival until last player/team remains</p>
-            <p></p>
-        </a>
-    
-        <a href="" class="game-card">
-          <h3>Puzzle</h3>
-          <p>Logic, patterns, and brain teasers</p>
-            <p></p>
-        </a>
-    
-        <a href="" class="game-card">
-          <h3>Platformer</h3>
-          <p>Jumping across levels, often side-scrolling</p>
-            <p></p>
-        </a>
-    
-        <a href="" class="game-card">
-          <h3>Horror</h3>
-          <p>Scary and intense storytelling with survival elements</p>
-            <p></p>
-        </a>
-    
-        <a href="" class="game-card">
-          <h3>Sandbox</h3>
-          <p>Open-ended gameplay with player freedom</p>
-            <p></p>
-        </a>
-    
-        <a href="" class="game-card">
-          <h3>MMO</h3>
-          <p>Massively multiplayer online games with large worlds</p>
-            <p></p>
-        </a>
-    
-        <a href="" class="game-card">
-          <h3>Casual</h3>
-          <p>Easy-to-play, short-session games</p>
-            <p></p>
-        </a>
-    
-        <a href="" class="game-card">
-          <h3>Party</h3>
-          <p>Multiplayer fun with friends and family</p>
-            <p></p>
-        </a>
-    
-        <a href="" class="game-card">
-          <h3>Rhythm</h3>
-          <p>Based on timing, music, and beats</p>
-            <p></p>
-        </a>
-    
-        <a href="" class="game-card">
-          <h3>Educational</h3>
-          <p>Games that teach and improve skills or knowledge</p>
-            <p></p>
-        </a>
-     <!-- Add more game types as needed -->
-  </section>
 
   <footer>
     <p> 2025 Gaming Hub. All rights reserved.</p>
@@ -339,19 +215,6 @@ font-weight: bold;
         localStorage.setItem('mode', 'light');
       }
     }
-    function searchGames() {
-      const input = document.getElementById("searchInput").value.toLowerCase();
-      const cards = document.querySelectorAll(".game-card");
-
-      cards.forEach(card => {
-        const title = card.querySelector("h3").textContent.toLowerCase();
-        if (title.includes(input)) {
-          card.style.display = "block";
-        } else {
-          card.style.display = "none";
-        }
-      });
-    }
-    </script>
+      </script>
 </body>
 </html>
