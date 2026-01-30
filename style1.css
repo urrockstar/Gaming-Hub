@@ -1,0 +1,267 @@
+/* =========================
+   Global Theme Variables
+========================= */
+:root {
+  --bg-dark: #0f0f0f;
+  --bg-light: #f0f4fa;
+  --text-dark: #fff;
+  --text-light: #111;
+  --primary-color: #5f27cd;
+  --accent-color: #34ffff;
+  --hover-red: #ff0000;
+}
+
+/* =========================
+   Base + Theme
+========================= */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  transition: background 0.3s, color 0.3s;
+}
+body.dark-mode { background: var(--bg-dark); color: var(--text-dark); }
+body.light-mode { background: var(--bg-light); color: var(--text-light); }
+
+/* =========================
+   Navbar (always black)
+========================= */
+header { background: black; position: sticky; top: 0; z-index: 1000; }
+/* =========================
+   NAVBAR (Always Black)
+========================= */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 70px;
+  width: 100%;
+  position: sticky;
+  top: 0;
+  background: black; /* ✅ Always black */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+}
+
+.navbar-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0 1.5rem;
+  max-width: 1300px;
+}
+
+.navbar-logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--accent-color);
+  text-decoration: none;
+}
+
+.navbar-menu {
+  display: flex;
+  gap: 1.5rem;
+  list-style: none;
+}
+.navbar-menu li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.05rem;
+  font-weight: 500;
+  padding: 6px 14px;
+  border-radius: 20px;
+  transition: all 0.3s ease;
+}
+.navbar-menu li a:hover {
+  background: rgba(255,255,255,0.15);
+  color: var(--accent-color);
+}
+.navbar-menu li a.active {
+  background: rgba(95,39,205,0.25);
+  color: var(--primary-color);
+  font-weight: bold;
+}
+
+/* Hamburger button */
+.navbar-toggle {
+  display: none;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  z-index: 1100;
+}
+.bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  background-color: #fff;
+  transition: all 0.3s ease-in-out;
+}
+
+/* =========================
+   MOBILE NAV DRAWER
+========================= */
+@media (max-width: 880px) {
+  .navbar-menu {
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.2rem;
+    position: fixed;
+    height: 100vh;
+    width: 40%;
+    top: 0;
+    right: 0;
+    padding: 5rem 1.5rem;
+    background: rgba(0,0,0,0.85);
+    backdrop-filter: blur(10px);
+  }
+
+  .navbar-menu.active {
+    display: flex;
+  }
+
+  .navbar-toggle {
+    display: block;
+  }
+
+  /* Hamburger → X animation */
+  .navbar-toggle.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+  .navbar-toggle.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+  .navbar-toggle.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+
+  .navbar-menu li a {
+    display: block;
+    width: 100%;
+    padding: 10px 14px;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    color: #fff;
+  }
+  .navbar-menu li a:hover {
+    background: rgba(255,255,255,0.12);
+    color: var(--accent-color);
+    box-shadow: inset 0 0 8px rgba(95,39,205,0.5);
+  }
+  .navbar-menu li a.active {
+    background: rgba(95,39,205,0.25);
+    color: var(--primary-color);
+    border-left: 3px solid var(--primary-color);
+  }
+}
+/* =========================
+   Hero (text only, no slideshow here)
+========================= */
+.hero {
+  text-align: center;
+  padding: 4rem 2rem 2rem;
+}
+.hero h1 {
+  font-size: 2.5rem;
+  text-shadow: 0 0 8px var(--accent-color);
+  margin: 0 0 1rem;
+}
+.hero p { font-size: 1.2rem; opacity: 0.9; }
+
+/* =========================
+   Cards (common style + glowing hover)
+========================= */
+.card, .feature-card, .download-card, .community-card {
+  background: linear-gradient(135deg, rgba(52,255,255,0.1), rgba(255,255,255,0.03));
+  border: 2px solid transparent;
+  border-radius: 16px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.25);
+  transition: transform 0.25s, box-shadow 0.25s, border 0.25s, background 0.25s;
+}
+.card:hover, .feature-card:hover, .download-card:hover, .community-card:hover {
+  transform: translateY(-6px);
+  border: 2px solid var(--accent-color);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+  background: linear-gradient(135deg, rgba(52,255,255,0.12), rgba(255,255,255,0.05));
+}
+
+/* Card Titles */
+.card h3, .feature-card h3, .download-card h3, .community-card h3 {
+  margin-bottom: 0.5rem;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+body.dark-mode h3 { color: var(--accent-color); }
+body.light-mode h3 { color: #0066cc; }
+.card:hover h3, .feature-card:hover h3, .download-card:hover h3, .community-card:hover h3 {
+  text-shadow: 0 0 10px var(--accent-color), 0 0 20px rgba(52,255,255,0.7);
+}
+body.light-mode .card:hover h3,
+body.light-mode .feature-card:hover h3,
+body.light-mode .download-card:hover h3,
+body.light-mode .community-card:hover h3 {
+  color: #0066ff;
+  text-shadow: 0 0 8px #3399ff, 0 0 16px rgba(51,153,255,0.7);
+}
+
+/* =========================
+   Footer
+========================= */
+footer {
+  text-align: center;
+  padding: 1rem;
+  background: #222;
+  color: white;
+}
+
+/* =========================
+   Mode Toggle
+========================= */
+.mode-toggle {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: none;
+  background: var(--primary-color);
+  color: white;
+  font-size: 1.2rem;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+  transition: transform 0.2s;
+  z-index: 2000;
+}
+.mode-toggle:hover { transform: scale(1.1); }
+/* =========================
+   Buttons (global styles)
+========================= */
+.btn {
+  display: inline-block;
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  font-weight: 600;
+  text-decoration: none;
+  background: var(--primary-color);
+  color: #fff;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.btn:hover {
+  background: var(--accent-color);
+  color: #000;
+  transform: scale(1.05);
+}
+
+/* Disabled Buttons */
+.btn.disabled {
+  background: #777 !important;
+  color: #ccc !important;
+  cursor: not-allowed !important;
+  pointer-events: none !important;
+  user-select: none;
+}
+

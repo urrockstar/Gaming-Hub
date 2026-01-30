@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Gaming Hub</title>
+
+  <!-- SEO -->
+  <meta name="description" content="Gaming Hub - Your gateway to the gaming universe. Explore features, downloads, and join the community." />
+  <meta property="og:title" content="Gaming Hub" />
+  <meta property="og:description" content="A platform built for gamers. Explore, connect, and play." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="images/slide1.jpg" />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+  <!-- Navbar -->
+ <header>
+  <nav class="navbar">
+    <div class="navbar-container">
+      <a href="index.html" class="navbar-logo">Gaming Hub</a>
+      <button class="navbar-toggle">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+      <ul class="navbar-menu">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="features.html">Features</a></li>
+        <li><a href="download.html">Download</a></li>
+        <li><a href="community.html">Community</a></li>
+        <li><a href="game-type/game-types.html">Game Types</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="games/Games.html">Games</a></li>
+      </ul>
+    </div>
+  </nav>
+</header>
+
+
+  <!-- Hero Section with Slideshow -->
+  <section id="hero" class="hero initial-bg">
+    <div class="slideshow" id="slideshow">
+      <div class="slide" style="background-image:url('images/slide1.jpg')" alt="Gaming slide 1"></div>
+      <div class="slide" style="background-image:url('images/slide2.jpg')" alt="Gaming slide 2"></div>
+      <div class="slide" style="background-image:url('images/slide3.jpg')" alt="Gaming slide 3"></div>
+      <div class="slide" style="background-image:url('images/slide4.jpg')" alt="Gaming slide 4"></div>
+    </div>
+    <div class="overlay"></div>
+    <div class="hero-content">
+      <h1>Welcome to Gaming Hub</h1>
+      <p>Your Gateway to the Gaming Universe</p>
+    </div>
+  </section>
+
+  <!-- Game Types -->
+  <section class="game-section">
+    <a href="game-type/action.html" class="game-card"><h3>Battle Royale</h3><p>Free Fire, PUBG, and more.</p></a>
+    <a href="game-type/multiplayer.html" class="game-card"><h3>Multiplayer Shooter</h3><p>COD Mobile, Warzone, and more.</p></a>
+    <a href="game-type/sports.html" class="game-card"><h3>Racing & Sports</h3><p>Asphalt, FIFA Mobile, and more.</p></a>
+    <a href="game-type/game-types.html" class="game-card"><h3>More Games</h3><p>Action, Creative & more.</p></a>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>2025 Gaming Hub. All rights reserved.</p>
+  </footer>
+
+  <!-- Toggle Button -->
+  <button class="mode-toggle" onclick="toggleMode()">☀️</button>
+
+  <!-- Scripts -->
+  <script src="script.js" defer></script>
+</body>
+</html>

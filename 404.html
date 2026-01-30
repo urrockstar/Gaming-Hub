@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>404 - Page Not Found | Gaming Hub</title>
+
+  <!-- SEO -->
+  <meta name="description" content="Oops! The page you are looking for doesn’t exist. Return to Gaming Hub and continue exploring.">
+  <meta property="og:title" content="404 - Page Not Found | Gaming Hub">
+  <meta property="og:description" content="The page you tried to visit doesn’t exist. Head back to Gaming Hub.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="images/hero-bg.jpg">
+
+  <!-- Global Styles -->
+  <link rel="stylesheet" href="style1.css">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+  <!-- Page-specific styles -->
+  <style>
+    .error-section {
+      text-align: center;
+      padding: 5rem 2rem;
+    }
+    .error-section h1 {
+      font-size: 6rem;
+      margin-bottom: 1rem;
+      text-shadow: 0 0 10px var(--accent-color);
+    }
+    .error-section p {
+      font-size: 1.3rem;
+      margin-bottom: 2rem;
+    }
+  </style>
+</head>
+<body>
+  <!-- Header / Navbar -->
+  <header>
+    <nav class="navbar">
+      <div class="navbar-container">
+        <a href="index.html" class="navbar-logo">Gaming Hub</a>
+        <button class="navbar-toggle">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
+        <ul class="navbar-menu">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="features.html">Features</a></li>
+          <li><a href="download.html">Download</a></li>
+          <li><a href="community.html">Community</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Error Section -->
+  <main>
+    <section class="error-section">
+      <h1>404</h1>
+      <p>Oops! The page you’re looking for doesn’t exist.</p>
+      <a href="index.html" class="btn">Go Back Home</a>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>2025 Gaming Hub. All rights reserved.</p>
+  </footer>
+
+  <!-- Toggle Button -->
+  <button class="mode-toggle" onclick="toggleMode()">☀️</button>
+
+  <!-- Scripts -->
+  <script src="script.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Download - Gaming Hub</title>
+
+  <!-- SEO -->
+  <meta name="description" content="Download Gaming Hub for Windows, Mac, Android, and iOS. Coming soon on all platforms.">
+  <meta property="og:title" content="Download - Gaming Hub">
+  <meta property="og:description" content="Gaming Hub downloads are coming soon for Windows, Mac, Android, and iOS.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="images/hero-bg.jpg">
+
+  <!-- Global Styles -->
+  <link rel="stylesheet" href="style1.css">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+  <!-- Page-specific styles -->
+  <style>
+    .download-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+      padding: 2rem;
+    }
+
+    .coming-soon {
+      margin-top: 0.8rem;
+      font-size: 0.9rem;
+      color: gray;
+      font-style: italic;
+    }
+  </style>
+</head>
+<body>
+  <!-- Header / Navbar -->
+  <header>
+    <nav class="navbar">
+      <div class="navbar-container">
+        <a href="index.html" class="navbar-logo">Gaming Hub</a>
+        <button class="navbar-toggle">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
+        <ul class="navbar-menu">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="features.html">Features</a></li>
+          <li><a href="download.html" class="active">Download</a></li>
+          <li><a href="community.html">Community</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <h1>Download Gaming Hub</h1>
+    <p>Choose your platform — downloads are coming soon!</p>
+  </section>
+
+  <!-- Download Grid -->
+  <main>
+    <section class="download-grid">
+      <div class="download-card">
+        <h3>💻 Windows</h3>
+        <p>Get the latest version of Gaming Hub for Windows.</p>
+        <a href="#" class="btn disabled">Download</a>
+        <div class="coming-soon">Coming soon</div>
+      </div>
+      <div class="download-card">
+        <h3>🍏 MacOS</h3>
+        <p>Download Gaming Hub for your Mac and stay connected.</p>
+        <a href="#" class="btn disabled">Download</a>
+        <div class="coming-soon">Coming soon</div>
+      </div>
+      <div class="download-card">
+        <h3>📱 Android</h3>
+        <p>Install Gaming Hub on your Android device via Google Play.</p>
+        <a href="#" class="btn disabled">Download</a>
+        <div class="coming-soon">Coming soon</div>
+      </div>
+      <div class="download-card">
+        <h3>📲 iOS</h3>
+        <p>Get Gaming Hub for iPhone and iPad from the App Store.</p>
+        <a href="#" class="btn disabled">Download</a>
+        <div class="coming-soon">Coming soon</div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>2025 Gaming Hub. All rights reserved.</p>
+  </footer>
+
+  <!-- Toggle Button -->
+  <button class="mode-toggle" onclick="toggleMode()">☀️</button>
+
+  <!-- Scripts -->
+  <script src="script.js" defer></script>
+</body>
+</html>

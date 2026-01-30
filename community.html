@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Community - Gaming Hub</title>
+
+  <!-- SEO -->
+  <meta name="description" content="Join the Gaming Hub community to connect with players worldwide, share tips, and join discussions.">
+  <meta property="og:title" content="Community - Gaming Hub">
+  <meta property="og:description" content="Connect, share, and game together in the Gaming Hub community.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="images/hero-bg.jpg">
+
+  <!-- Global Styles -->
+  <link rel="stylesheet" href="style1.css">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+  <!-- Page-specific styles -->
+  <style>
+    .community-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+      padding: 2rem;
+    }
+    .community-card p {
+      line-height: 1.6;
+      font-size: 0.95rem;
+      opacity: 0.9;
+    }
+  </style>
+</head>
+<body>
+  <!-- Header / Navbar -->
+  <header>
+    <nav class="navbar">
+      <div class="navbar-container">
+        <a href="index.html" class="navbar-logo">Gaming Hub</a>
+        <button class="navbar-toggle">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
+        <ul class="navbar-menu">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="features.html">Features</a></li>
+          <li><a href="download.html">Download</a></li>
+          <li><a href="community.html" class="active">Community</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <h1>Community</h1>
+    <p>Connect with fellow gamers, share experiences, and grow together.</p>
+  </section>
+
+  <!-- Community Grid -->
+  <main>
+    <section class="community-grid">
+      <div class="community-card">
+        <h3>💬 Forums</h3>
+        <p>Join topic-based discussions, share strategies, and meet gamers who love the same titles as you.</p>
+      </div>
+      <div class="community-card">
+        <h3>🎉 Events</h3>
+        <p>Stay up-to-date with upcoming tournaments, challenges, and special gaming events.</p>
+      </div>
+      <div class="community-card">
+        <h3>🤝 Teams</h3>
+        <p>Create or join teams to play together, compete, and climb leaderboards.</p>
+      </div>
+      <div class="community-card">
+        <h3>📢 Announcements</h3>
+        <p>Get the latest community news, updates, and patch notes directly from Gaming Hub.</p>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>2025 Gaming Hub. All rights reserved.</p>
+  </footer>
+
+  <!-- Toggle Button -->
+  <button class="mode-toggle" onclick="toggleMode()">☀️</button>
+
+  <!-- Scripts -->
+  <script src="script.js" defer></script>
+</body>
+</html>
