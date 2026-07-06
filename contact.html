@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact - Gaming Hub</title>
+
+  <!-- SEO -->
+  <meta name="description" content="Get in touch with Gaming Hub for support, feedback, or partnership inquiries.">
+  <meta property="og:title" content="Contact - Gaming Hub">
+  <meta property="og:description" content="Contact Gaming Hub for support, feedback, or general inquiries.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="images/slide1.jpg">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <nav class="navbar">
+      <div class="navbar-container">
+
+        <a href="index.html" class="navbar-logo">
+          Gaming Hub
+        </a>
+
+        <button class="navbar-toggle">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
+
+        <ul class="navbar-menu">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="index.html#about">About</a></li>
+          <li><a href="index.html#features">Features</a></li>
+          <li><a href="index.html#community">Community</a></li>
+          <li><a href="index.html#download">Download</a></li>
+          <li><a href="contact.html" class="active">Contact</a></li>
+        </ul>
+
+      </div>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+
+    <div class="overlay"></div>
+
+    <div class="hero-content">
+      <h1>Contact Gaming Hub</h1>
+
+      <p>
+        Questions, feedback, partnerships,
+        or suggestions? We'd love to hear from you.
+      </p>
+    </div>
+
+  </section>
+
+  <!-- CONTACT SECTION -->
+  <main>
+
+    <section class="contact-section">
+
+      <div class="contact-card">
+
+        <h2>Get In Touch</h2>
+
+        <p class="contact-description">
+          Have a question or want to collaborate?
+          Send us a message and we'll get back to you.
+        </p>
+
+        <!-- CONTACT INFO -->
+
+        <div class="contact-info">
+
+          <div class="info-item">
+            <i class="fas fa-envelope"></i>
+            <span>ur****gmail.com</span>
+          </div>
+
+          <div class="info-item">
+            <i class="fas fa-globe"></i>
+            <span>Worldwide Gaming Community</span>
+          </div>
+
+          <div class="info-item">
+            <i class="fas fa-gamepad"></i>
+            <span>Gaming Hub Support</span>
+          </div>
+
+        </div>
+
+        <!-- FORM -->
+
+        <form
+          action="https://formspree.io/f/xvganezw"
+          method="POST"
+          id="myForm">
+
+          <input
+            type="text"
+            name="name"
+            placeholder="Your Name"
+            required>
+
+          <input
+            type="email"
+            name="email"
+            placeholder="Your Email"
+            required>
+
+          <textarea
+            name="message"
+            placeholder="Your Message"
+            required></textarea>
+
+          <button type="submit" class="btn">
+            Send Message
+          </button>
+
+        </form>
+
+        <p id="statusMessage">
+          Thanks! Your message has been sent.
+        </p>
+
+        <!-- SOCIALS -->
+
+        <div class="social-icons">
+
+          <a href="#">
+            <i class="fas fa-envelope"></i>
+          </a>
+
+          <a
+            href="https://www.youtube.com/@UR_ROCKSTAR1"
+            target="_blank">
+
+            <i class="fab fa-youtube"></i>
+
+          </a>
+
+          <a href="#">
+            <i class="fab fa-instagram"></i>
+          </a>
+
+          <a href="#">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+
+  <footer class="footer">
+
+  <div class="footer-content">
+
+    <div class="footer-brand">
+      <h3>Gaming Hub</h3>
+      <p>Your Gateway To The Gaming Universe</p>
+    </div>
+
+    <div class="footer-links">
+      <a href="index.html#about">About</a>
+      <a href="index.html#features">Features</a>
+      <a href="index.html#community">Community</a>
+      <a href="index.html#download">Download</a>
+      <a href="contact.html">Contact</a>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    <p>© <span id="footer-year"></span> Gaming Hub. All rights reserved.</p>
+  </div>
+
+</footer>
+
+
+  <!-- DARK MODE BUTTON -->
+
+  <button
+    class="mode-toggle"
+    onclick="toggleMode()">
+
+    ☀️
+
+  </button>
+
+  <!-- SCRIPTS -->
+
+  <script src="script.js"></script>
+
+  <script>
+
+    const form =
+      document.getElementById("myForm");
+
+    const statusMessage =
+      document.getElementById("statusMessage");
+
+    form.addEventListener(
+      "submit",
+      function(event){
+
+      event.preventDefault();
+
+      fetch(form.action,{
+
+        method:"POST",
+
+        body:new FormData(form),
+
+        headers:{
+          "Accept":"application/json"
+        }
+
+      })
+
+      .then(response => {
+
+        if(response.ok){
+
+          statusMessage.style.display =
+            "block";
+
+          statusMessage.style.color =
+            "#34ffff";
+
+          statusMessage.textContent =
+            "Thanks! Your message has been sent.";
+
+          form.reset();
+
+        } else {
+
+          statusMessage.style.display =
+            "block";
+
+          statusMessage.style.color =
+            "#ff4d4d";
+
+          statusMessage.textContent =
+            "Oops! Something went wrong.";
+
+        }
+
+      })
+
+      .catch(() => {
+
+        statusMessage.style.display =
+          "block";
+
+        statusMessage.style.color =
+          "#ff4d4d";
+
+        statusMessage.textContent =
+          "Network error. Please try again.";
+
+      });
+
+    });
+
+  </script>
+
+</body>
+</html>
+```
