@@ -3,10 +3,43 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Gaming Hub</title>
 
+<!-- SEO -->
 <meta name="description"
-content="Gaming Hub - Your gateway to the gaming universe">
+content="Gaming Hub - Your gateway to the gaming universe. Discover games, explore guides, join the community, and stay updated with the latest gaming content.">
+
+<meta name="author" content="Gaming Hub">
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#0f0f0f">
+<meta name="color-scheme" content="dark light">
+
+<!-- Open Graph -->
+<meta property="og:title" content="Gaming Hub">
+
+<meta property="og:description"
+content="Gaming Hub - Your gateway to the gaming universe. Discover games, explore guides, join the community, and stay updated with the latest gaming content.">
+
+<meta property="og:image"
+content="images/slide1.jpg">
+
+<meta property="og:type"
+content="website">
+
+<meta property="og:url"
+content="https://urrockstar.github.io/Gaming-Hub/">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+
+<meta name="twitter:title" content="Gaming Hub">
+
+<meta name="twitter:description"
+content="Gaming Hub - Your gateway to the gaming universe.">
+
+<meta name="twitter:image"
+content="images/slide1.jpg">
 
 <link rel="stylesheet" href="style.css">
 <link rel="icon" href="favicon.ico">
@@ -15,7 +48,7 @@ content="Gaming Hub - Your gateway to the gaming universe">
 <body>
 
 <header>
-  <nav class="navbar">
+  <nav class="navbar" aria-label="Main Navigation">
     <div class="navbar-container">
 
       <a href="index.html" class="navbar-logo">
@@ -42,6 +75,8 @@ content="Gaming Hub - Your gateway to the gaming universe">
     </div>
   </nav>
 </header>
+
+<main>
 
 <!-- HERO -->
 <section id="hero" class="hero initial-bg">
@@ -83,7 +118,10 @@ content="Gaming Hub - Your gateway to the gaming universe">
   <div class="about-container">
 
     <div class="about-image">
-      <img src="images/about1.jpg" alt="Gaming Hub">
+      <img
+      src="images/about1.jpg"
+      alt="Gaming Hub community playing multiplayer games"
+      loading="lazy">
     </div>
 
     <div class="about-text">
@@ -173,7 +211,7 @@ content="Gaming Hub - Your gateway to the gaming universe">
       <p>Free Fire, PUBG and more.</p>
     </a>
 
-    <a href="coming-soon.htmL" class="game-card">
+    <a href="coming-soon.html" class="game-card">
       <h3>Multiplayer Shooter</h3>
       <p>COD Mobile, Warzone and more.</p>
     </a>
@@ -237,9 +275,9 @@ content="Gaming Hub - Your gateway to the gaming universe">
       iOS And MacOS
     </p>
 
-    <h3 href="#" class="download-btn">
-      Coming Soon
-    </h3>
+    <div class="download-btn">
+    Coming Soon
+    </div>
 
   </div>
 
@@ -264,6 +302,9 @@ content="Gaming Hub - Your gateway to the gaming universe">
   </div>
 
 </section>
+
+</main>
+
 
 <footer class="footer">
 
