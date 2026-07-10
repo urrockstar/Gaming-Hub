@@ -3,11 +3,11 @@
 ========================= */
 :root {
   --bg-dark: #0f0f0f;
-  --bg-light: #e9f1fb; /* Pale blue like ASMultiverse */
+  --bg-light: #e9f1fb; 
   --text-dark: #fff;
   --text-light: #222;
-  --primary-color: #5f27cd;  /* Purple */
-  --accent-color: #34ffff;   /* Cyan */
+  --primary-color: #5f27cd; 
+  --accent-color: #34ffff;  
 }
 
 /* =========================
@@ -19,17 +19,19 @@
   padding: 0;
 }
 body {
-  font-family: 'Segoe UI', sans-serif;
-  transition: background 0.3s, color 0.3s;
-}
-body.dark-mode {
-  background: var(--bg-dark);
-  color: var(--text-dark);
-}
-body.light-mode {
-  background: var(--bg-light);
-  color: var(--text-light);
+  font-family: "Segoe UI", sans-serif;
   line-height: 1.6;
+  transition: background .3s,color .3s;
+}
+
+body.dark-mode{
+  background:var(--bg-dark);
+  color:var(--text-dark);
+}
+
+body.light-mode{
+  background:var(--bg-light);
+  color:var(--text-light);
 }
 
 /* =========================
@@ -847,7 +849,7 @@ body.light-mode .feature-card h3 {
 }
 
 .footer-links a{
-  color:white;
+  color:purple;
   text-decoration:none;
 }
 

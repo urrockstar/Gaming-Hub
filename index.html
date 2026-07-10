@@ -5,7 +5,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Gaming Hub</title>
+  <title>
+    Gaming Hub | Discover Games, Guides & Community
+  </title>
 
   <!-- SEO -->
   <meta name="description"
@@ -38,7 +40,7 @@
   <meta name="twitter:image" content="images/slide1.jpg">
 
   <link rel="stylesheet" href="style.css">
-  <link rel="icon" href="favicon.ico">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
 </head>
 
 <body>
@@ -51,13 +53,14 @@
           Gaming Hub
         </a>
 
-        <button class="navbar-toggle">
+        <button class="navbar-toggle" aria-label="Open navigation menu" aria-expanded="false"
+          aria-controls="navbar-menu">
           <span class="bar"></span>
           <span class="bar"></span>
           <span class="bar"></span>
         </button>
 
-        <ul class="navbar-menu">
+        <ul id="navbar-menu" class="navbar-menu">
           <li><a href="#hero" class="active">Home</a></li>
           <li><a href="#about">About</a></li>
           <li><a href="#features">Features</a></li>
@@ -95,11 +98,11 @@
         </p>
 
         <div class="hero-buttons">
-          <a href="#features" class="hero-btn">
+          <a href="#features" class="hero-btn" aria-label="Explore Features">
             Explore
           </a>
 
-          <a href="#community" class="hero-btn secondary">
+          <a href="#community" class="hero-btn secondary" aria-label="Join Community">
             Community
           </a>
         </div>
@@ -197,7 +200,7 @@
         Popular Categories
       </h2>
 
-      <section class="game-section">
+      <div class="game-section">
 
         <a href="coming-soon.html" class="game-card reveal fade-up">
           <h3>Battle Royale</h3>
@@ -219,7 +222,7 @@
           <p>Explore all categories.</p>
         </a>
 
-      </section>
+      </div>
 
     </section>
 
@@ -288,7 +291,7 @@
           We'd love to hear from you.
         </p>
 
-        <a href="contact.html" class="contact-btn">
+        <a href="contact.html" class="contact-btn" aria-label="Contact Us">
           Contact Us
         </a>
 
@@ -301,7 +304,7 @@
 
   <footer class="footer">
 
-    <div class="footer-content reveal fade-up">
+    <div class="footer-content">
 
       <div class="footer-brand">
         <h3>Gaming Hub</h3>

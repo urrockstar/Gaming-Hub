@@ -1,44 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>Contact - Gaming Hub</title>
 
   <!-- SEO -->
-  <meta name="description" content="Get in touch with Gaming Hub for support, feedback, or partnership inquiries.">
-  <meta property="og:title" content="Contact - Gaming Hub">
-  <meta property="og:description" content="Contact Gaming Hub for support, feedback, or general inquiries.">
-  <meta property="og:type" content="website">
+  <meta name="description"
+    content="Gaming Hub - Your gateway to the gaming universe. Discover games, explore guides, join the community, and stay updated with the latest gaming content.">
+
+  <meta name="author" content="Gaming Hub">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#0f0f0f">
+  <meta name="color-scheme" content="dark light">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Gaming Hub">
+
+  <meta property="og:description"
+    content="Gaming Hub - Your gateway to the gaming universe. Discover games, explore guides, join the community, and stay updated with the latest gaming content.">
+
   <meta property="og:image" content="images/slide1.jpg">
 
-  <!-- Styles -->
-  <link rel="stylesheet" href="style.css">
-  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <meta property="og:type" content="website">
 
-  <!-- Font Awesome -->
-  <link rel="stylesheet"
-  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <meta property="og:url" content="https://urrockstar.github.io/Gaming-Hub/">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+
+  <meta name="twitter:title" content="Gaming Hub">
+
+  <meta name="twitter:description" content="Gaming Hub - Your gateway to the gaming universe.">
+
+  <meta name="twitter:image" content="images/slide1.jpg">
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
 </head>
 
 <body>
 
   <!-- HEADER -->
   <header>
-    <nav class="navbar">
+    <nav class="navbar" aria-label="Main Navigation">
       <div class="navbar-container">
 
         <a href="index.html" class="navbar-logo">
           Gaming Hub
         </a>
 
-        <button class="navbar-toggle">
+        <button class="navbar-toggle" aria-label="Open navigation menu" aria-expanded="false"
+          aria-controls="navbar-menu">
           <span class="bar"></span>
           <span class="bar"></span>
           <span class="bar"></span>
         </button>
 
-        <ul class="navbar-menu">
+        <ul id="navbar-menu" class="navbar-menu">
           <li><a href="index.html">Home</a></li>
           <li><a href="index.html#about">About</a></li>
           <li><a href="index.html#features">Features</a></li>
@@ -104,27 +125,13 @@
 
         <!-- FORM -->
 
-        <form
-          action="https://formspree.io/f/xvganezw"
-          method="POST"
-          id="myForm">
+        <form action="https://formspree.io/f/xvganezw" method="POST" id="myForm">
 
-          <input
-            type="text"
-            name="name"
-            placeholder="Your Name"
-            required>
+          <input type="text" name="name" placeholder="Your Name" required>
 
-          <input
-            type="email"
-            name="email"
-            placeholder="Your Email"
-            required>
+          <input type="email" name="email" placeholder="Your Email" required>
 
-          <textarea
-            name="message"
-            placeholder="Your Message"
-            required></textarea>
+          <textarea name="message" placeholder="Your Message" required></textarea>
 
           <button type="submit" class="btn">
             Send Message
@@ -144,9 +151,7 @@
             <i class="fas fa-envelope"></i>
           </a>
 
-          <a
-            href="https://www.youtube.com/@UR_ROCKSTAR1"
-            target="_blank">
+          <a href="https://www.youtube.com/@UR_ROCKSTAR1" target="_blank">
 
             <i class="fab fa-youtube"></i>
 
@@ -172,35 +177,33 @@
 
   <footer class="footer">
 
-  <div class="footer-content reveal fade-up">
+    <div class="footer-content">
 
-    <div class="footer-brand">
-      <h3>Gaming Hub</h3>
-      <p>Your Gateway To The Gaming Universe</p>
+      <div class="footer-brand">
+        <h3>Gaming Hub</h3>
+        <p>Your Gateway To The Gaming Universe</p>
+      </div>
+
+      <div class="footer-links">
+        <a href="index.html#about">About</a>
+        <a href="index.html#features">Features</a>
+        <a href="index.html#community">Community</a>
+        <a href="index.html#download">Download</a>
+        <a href="contact.html">Contact</a>
+      </div>
+
     </div>
 
-    <div class="footer-links">
-      <a href="index.html#about">About</a>
-      <a href="index.html#features">Features</a>
-      <a href="index.html#community">Community</a>
-      <a href="index.html#download">Download</a>
-      <a href="contact.html">Contact</a>
+    <div class="footer-bottom">
+      <p>© <span id="footer-year"></span> Gaming Hub. All rights reserved.</p>
     </div>
 
-  </div>
-
-  <div class="footer-bottom">
-    <p>© <span id="footer-year"></span> Gaming Hub. All rights reserved.</p>
-  </div>
-
-</footer>
+  </footer>
 
 
   <!-- DARK MODE BUTTON -->
 
-  <button
-    class="mode-toggle"
-    onclick="toggleMode()">
+  <button class="mode-toggle" onclick="toggleMode()">
 
     ☀️
 
@@ -220,69 +223,69 @@
 
     form.addEventListener(
       "submit",
-      function(event){
+      function (event) {
 
-      event.preventDefault();
+        event.preventDefault();
 
-      fetch(form.action,{
+        fetch(form.action, {
 
-        method:"POST",
+          method: "POST",
 
-        body:new FormData(form),
+          body: new FormData(form),
 
-        headers:{
-          "Accept":"application/json"
-        }
+          headers: {
+            "Accept": "application/json"
+          }
 
-      })
+        })
 
-      .then(response => {
+          .then(response => {
 
-        if(response.ok){
+            if (response.ok) {
 
-          statusMessage.style.display =
-            "block";
+              statusMessage.style.display =
+                "block";
 
-          statusMessage.style.color =
-            "#34ffff";
+              statusMessage.style.color =
+                "#34ffff";
 
-          statusMessage.textContent =
-            "Thanks! Your message has been sent.";
+              statusMessage.textContent =
+                "Thanks! Your message has been sent.";
 
-          form.reset();
+              form.reset();
 
-        } else {
+            } else {
 
-          statusMessage.style.display =
-            "block";
+              statusMessage.style.display =
+                "block";
 
-          statusMessage.style.color =
-            "#ff4d4d";
+              statusMessage.style.color =
+                "#ff4d4d";
 
-          statusMessage.textContent =
-            "Oops! Something went wrong.";
+              statusMessage.textContent =
+                "Oops! Something went wrong.";
 
-        }
+            }
 
-      })
+          })
 
-      .catch(() => {
+          .catch(() => {
 
-        statusMessage.style.display =
-          "block";
+            statusMessage.style.display =
+              "block";
 
-        statusMessage.style.color =
-          "#ff4d4d";
+            statusMessage.style.color =
+              "#ff4d4d";
 
-        statusMessage.textContent =
-          "Network error. Please try again.";
+            statusMessage.textContent =
+              "Network error. Please try again.";
+
+          });
 
       });
-
-    });
 
   </script>
 
 </body>
+
 </html>
-```
