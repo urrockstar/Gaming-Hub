@@ -890,3 +890,47 @@ body{
   border-radius:20px;
 }
 
+/* ==========================================
+||SCROLL REVEAL ANIMATIONS
+========================================== */
+
+.reveal {
+  opacity: 0;
+  transition:
+    opacity 0.8s ease,
+    transform 0.8s ease;
+  will-change: opacity, transform;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translate3d(0, 0, 0) scale(1);
+}
+
+.fade-up {
+  transform: translate3d(0, 60px, 0);
+}
+
+.fade-left {
+  transform: translate3d(-60px, 0, 0);
+}
+
+.fade-right {
+  transform: translate3d(60px, 0, 0);
+}
+
+.zoom-in {
+  transform: scale(0.9);
+}
+
+/* Respect users who prefer reduced motion */
+@media (prefers-reduced-motion: reduce) {
+
+  .reveal,
+  .reveal.active {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
+}
