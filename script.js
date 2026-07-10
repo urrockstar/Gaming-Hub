@@ -1,16 +1,90 @@
 /* =========================
-   NAVBAR TOGGLE
+   PROFESSIONAL NAVBAR
 ========================= */
+
 const navbarToggle = document.querySelector(".navbar-toggle");
 const navbarMenu = document.querySelector(".navbar-menu");
+const body = document.body;
 
 if (navbarToggle && navbarMenu) {
-  navbarToggle.addEventListener("click", () => {
-    navbarToggle.classList.toggle("active");
-    navbarMenu.classList.toggle("active");
-  });
-}
 
+  function openMenu() {
+    navbarToggle.classList.add("active");
+    navbarMenu.classList.add("active");
+
+    navbarToggle.setAttribute("aria-expanded", "true");
+
+    body.style.overflow = "hidden";
+  }
+
+  function closeMenu() {
+    navbarToggle.classList.remove("active");
+    navbarMenu.classList.remove("active");
+
+    navbarToggle.setAttribute("aria-expanded", "false");
+
+    body.style.overflow = "";
+  }
+
+  function toggleMenu() {
+
+    if (navbarMenu.classList.contains("active")) {
+      closeMenu();
+    } else {
+      openMenu();
+    }
+
+  }
+
+  navbarToggle.addEventListener("click", toggleMenu);
+
+
+const navLinks = navbarMenu.querySelectorAll("a");
+
+navLinks.forEach((link) => {
+
+  link.addEventListener("click", () => {
+
+    closeMenu();
+
+  });
+
+});
+
+document.addEventListener("click", (event) => {
+
+  const clickedInsideMenu =
+    navbarMenu.contains(event.target);
+
+  const clickedToggle =
+    navbarToggle.contains(event.target);
+
+  if (
+    navbarMenu.classList.contains("active") &&
+    !clickedInsideMenu &&
+    !clickedToggle
+  ) {
+
+    closeMenu();
+
+  }
+
+});
+
+document.addEventListener("keydown", (event) => {
+
+  if (
+    event.key === "Escape" &&
+    navbarMenu.classList.contains("active")
+  ) {
+
+    closeMenu();
+
+  }
+
+});
+
+}
 /* =========================
    DARK / LIGHT MODE
 ========================= */
