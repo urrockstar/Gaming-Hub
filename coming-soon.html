@@ -40,7 +40,13 @@
   <link rel="stylesheet" href="style.css">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
 </head>
+
 <body>
+
+  <!-- Scroll Progress Bar -->
+  <div class="scroll-progress" aria-hidden="true">
+    <div class="scroll-progress-bar" id="scroll-progress-bar"></div>
+  </div>
 
   <!-- NAVBAR -->
   <header>
@@ -183,8 +189,13 @@
     ☀️
   </button>
 
-  <script src="script.js"></script>
+  <button id="backToTop" aria-label="Back to top">
+    ↑
+  </button>
 
+  <script src="script.js"></script>
+<div class="cursor-dot"></div>
+<div class="cursor-ring"></div>
 </body>
 
 </html>

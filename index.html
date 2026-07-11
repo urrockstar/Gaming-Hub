@@ -45,6 +45,15 @@
 
 <body>
 
+  <div id="preloader">
+    <div class="loader"></div>
+  </div>
+  
+  <!-- Scroll Progress Bar -->
+  <div class="scroll-progress" aria-hidden="true">
+    <div class="scroll-progress-bar" id="scroll-progress-bar"></div>
+  </div>
+
   <header>
     <nav class="navbar" aria-label="Main Navigation">
       <div class="navbar-container">
@@ -330,7 +339,14 @@
     ☀️
   </button>
 
+  <button id="backToTop" aria-label="Back to top">
+    ↑
+  </button>
+
   <script src="script.js"></script>
+
+  <div class="cursor-dot"></div>
+  <div class="cursor-ring"></div>
 
 </body>
 

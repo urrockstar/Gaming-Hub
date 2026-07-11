@@ -17,31 +17,42 @@
   <meta name="color-scheme" content="dark light">
 
   <!-- Open Graph -->
-  <meta property="og:title" content="Gaming Hub">
+  <meta property="og:title" content="Contact - Gaming Hub">
 
   <meta property="og:description"
-    content="Gaming Hub - Your gateway to the gaming universe. Discover games, explore guides, join the community, and stay updated with the latest gaming content.">
+    content="Contact Gaming Hub for support, feedback, partnerships, and general inquiries.">
 
   <meta property="og:image" content="images/slide1.jpg">
 
   <meta property="og:type" content="website">
 
-  <meta property="og:url" content="https://urrockstar.github.io/Gaming-Hub/">
+  <meta property="og:url" content="https://urrockstar.github.io/Gaming-Hub/contect.html">
 
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image">
 
-  <meta name="twitter:title" content="Gaming Hub">
+  <meta name="twitter:title" content="Contact - Gaming Hub">
 
-  <meta name="twitter:description" content="Gaming Hub - Your gateway to the gaming universe.">
+  <meta name="twitter:description"
+    content="Contact Gaming Hub for support, feedback, partnerships, and general inquiries..">
 
   <meta name="twitter:image" content="images/slide1.jpg">
 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link rel="stylesheet" href="style.css">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
 </head>
 
 <body>
+
+  <div id="preloader">
+    <div class="loader"></div>
+  </div>
+
+  <!-- Scroll Progress Bar -->
+  <div class="scroll-progress" aria-hidden="true">
+    <div class="scroll-progress-bar" id="scroll-progress-bar"></div>
+  </div>
 
   <!-- HEADER -->
   <header>
@@ -139,7 +150,7 @@
 
         </form>
 
-        <p id="statusMessage">
+        <p id="statusMessage" aria-live="polite">
           Thanks! Your message has been sent.
         </p>
 
@@ -207,6 +218,10 @@
 
     ☀️
 
+  </button>
+
+  <button id="backToTop" aria-label="Back to top">
+    ↑
   </button>
 
   <!-- SCRIPTS -->
@@ -285,7 +300,8 @@
       });
 
   </script>
-
+<div class="cursor-dot"></div>
+<div class="cursor-ring"></div>
 </body>
 
 </html>

@@ -39,50 +39,50 @@ if (navbarToggle && navbarMenu) {
   navbarToggle.addEventListener("click", toggleMenu);
 
 
-const navLinks = navbarMenu.querySelectorAll("a");
+  const navLinks = navbarMenu.querySelectorAll("a");
 
-navLinks.forEach((link) => {
+  navLinks.forEach((link) => {
 
-  link.addEventListener("click", () => {
+    link.addEventListener("click", () => {
 
-    closeMenu();
+      closeMenu();
+
+    });
 
   });
 
-});
+  document.addEventListener("click", (event) => {
 
-document.addEventListener("click", (event) => {
+    const clickedInsideMenu =
+      navbarMenu.contains(event.target);
 
-  const clickedInsideMenu =
-    navbarMenu.contains(event.target);
+    const clickedToggle =
+      navbarToggle.contains(event.target);
 
-  const clickedToggle =
-    navbarToggle.contains(event.target);
+    if (
+      navbarMenu.classList.contains("active") &&
+      !clickedInsideMenu &&
+      !clickedToggle
+    ) {
 
-  if (
-    navbarMenu.classList.contains("active") &&
-    !clickedInsideMenu &&
-    !clickedToggle
-  ) {
+      closeMenu();
 
-    closeMenu();
+    }
 
-  }
+  });
 
-});
+  document.addEventListener("keydown", (event) => {
 
-document.addEventListener("keydown", (event) => {
+    if (
+      event.key === "Escape" &&
+      navbarMenu.classList.contains("active")
+    ) {
 
-  if (
-    event.key === "Escape" &&
-    navbarMenu.classList.contains("active")
-  ) {
+      closeMenu();
 
-    closeMenu();
+    }
 
-  }
-
-});
+  });
 
 }
 /* =========================
@@ -206,10 +206,9 @@ if (pageSections.length > 0) {
       const sectionTop = section.offsetTop - 150;
       const sectionHeight = section.offsetHeight;
 
-      if (
-        window.scrollY >= sectionTop &&
-        window.scrollY < sectionTop + sectionHeight
-      ) {
+      const sectionMiddle = sectionTop + sectionHeight / 3;
+
+      if (window.scrollY >= sectionMiddle) {
         current = section.id;
       }
 
@@ -271,7 +270,7 @@ window.addEventListener("scroll", () => {
 const footerYear = document.getElementById("footer-year");
 if (footerYear) {
   footerYear.textContent = new Date().getFullYear();
-}           
+}
 
 /* =========================
    SCROLL REVEAL ANIMATION
@@ -321,5 +320,146 @@ if ("IntersectionObserver" in window && revealElements.length > 0) {
     element.classList.add("active");
 
   });
+
+}
+/* =========================
+   SCROLL PROGRESS BAR
+========================= */
+
+const scrollProgressBar = document.getElementById("scroll-progress-bar");
+
+if (scrollProgressBar) {
+
+  function updateScrollProgress() {
+
+    const scrollTop = window.scrollY;
+
+    const scrollHeight =
+      document.documentElement.scrollHeight -
+      document.documentElement.clientHeight;
+
+    const progress =
+      scrollHeight > 0
+        ? (scrollTop / scrollHeight) * 100
+        : 0;
+
+    scrollProgressBar.style.width = `${progress}%`;
+
+  }
+
+  window.addEventListener("scroll", updateScrollProgress);
+
+  window.addEventListener("resize", updateScrollProgress);
+
+  updateScrollProgress();
+
+}
+
+/* =========================
+   BACK TO TOP BUTTON
+========================= */
+
+const backToTop = document.getElementById("backToTop");
+
+if (backToTop) {
+
+  window.addEventListener("scroll", () => {
+
+    if (window.scrollY > 300) {
+      backToTop.classList.add("show");
+    } else {
+      backToTop.classList.remove("show");
+    }
+
+  });
+
+  backToTop.addEventListener("click", () => {
+
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+
+  });
+
+}
+
+/* =========================
+   PRELOADER
+========================= */
+
+window.addEventListener("load", () => {
+
+  const preloader = document.getElementById("preloader");
+
+  if (preloader) {
+
+    preloader.classList.add("hide");
+
+    setTimeout(() => {
+
+      preloader.remove();
+
+    }, 500);
+
+  }
+
+});
+/* =========================
+   CUSTOM CURSOR
+========================= */
+
+if (window.matchMedia("(pointer:fine)").matches) {
+
+  const dot = document.querySelector(".cursor-dot");
+  const ring = document.querySelector(".cursor-ring");
+
+  let mouseX = 0;
+  let mouseY = 0;
+
+  let ringX = 0;
+  let ringY = 0;
+
+  document.addEventListener("mousemove", (e) => {
+
+    mouseX = e.clientX;
+    mouseY = e.clientY;
+
+    dot.style.left = mouseX + "px";
+    dot.style.top = mouseY + "px";
+
+  });
+
+  function animateRing() {
+
+    ringX += (mouseX - ringX) * 0.18;
+    ringY += (mouseY - ringY) * 0.18;
+
+    ring.style.left = ringX + "px";
+    ring.style.top = ringY + "px";
+
+    requestAnimationFrame(animateRing);
+
+  }
+
+  animateRing();
+
+  document
+    .querySelectorAll("a, button")
+    .forEach((element) => {
+
+      element.addEventListener("mouseenter", () => {
+
+        ring.classList.add("hover");
+
+      });
+
+      element.addEventListener("mouseleave", () => {
+
+        ring.classList.remove("hover");
+
+      });
+
+    });
 
 }
